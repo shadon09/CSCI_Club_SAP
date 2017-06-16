@@ -1,0 +1,9 @@
+Updating project to latest version
+git pull
+If above didn't work:
+git pull origin master
+
+Submitting work
+1. git add --all
+2. git commit -m "Quote"
+3. git push -u origin master
