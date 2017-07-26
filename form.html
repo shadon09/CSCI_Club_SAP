@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+
+<meta charset = "UTF-8">
+<title>Event Registration Form</title>
+</head>
+
+
+<body>
+
+<!-- This is how to write comments in html. -->
+
+<!-- The file paths for jquery and the script.js will change depending where they are saved. -->
+<!-- NEED TO ADD A JQUERY FILE TO FULFILL THIS ONE -->
+<script src = "jquery-3.2.1.min.js"></script>
+<script src = "script.js"></script>
+
+<!-- the id's in the input tags are used to search for the user's input in the script.js file. -->
+<label>Event Name:</label>
+<input type = "text" id = "eventname" name = "eventname"/><br/>
+
+<label>Event Type:</label>
+<select name = "course" id = "course">
+	<option value = "academic">Academic</option>
+	<option value = "cultural">Cultural</option>
+	<option value = "other">Other</option>
+</select><br/>
+
+<label>Event Holder Name:</label>
+<input type = "text" id = "holdername" name = "holdername"/><br/>
+
+<label>Email:</label>
+<input type = "text" id = "email" name = "email"/><br/>
+
+<label>Phone Number:</label>
+<input type = "text" id = "phonenumber" name = "phonenumber"/><br/>
+
+<label>Guest Name:</label>
+<input type = "text" id = "guestname" name = "guestname"/><br/>
+
+<label>Location:</label>
+<input type = "text" id = "location" name = "location"/><br/>
+
+<label>Date:</label>
+<input type = "text" id = "date" name = "date"/><br/>
+
+<label>Time:</label>
+<input type = "text" id = "time" name = "time"/><br/>
+
+<label>Description:</label>
+<input type = "text" id = "description" name = "description"/><br/>
+
+<!-- The action for this submit button is set up in the script.js file. -->
+<input id = "submit" name = "submit" type = "submit" value = "Submit" />
+
+<!-- The reset buttton is not functionally. I could not figure out how to code it in the script.js file. -->
+<input type = "reset" value = "reset"/>
+
+<!-- prints the result of the data being saved -->
+<div id = "result"></div>
+
+</body>
+
+</html>
