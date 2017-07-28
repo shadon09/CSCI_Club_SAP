@@ -1,13 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- The above is HTML 4.01 for allowing various browsers to properly load the page. -->
-<html>
+<html lang="en-US">
 <head>
   <!-- Worked on by Jacob Rachal & Ian Campos for Fresno State's Computer Science Club's Summer App Project. -->
+  <!-- TOdo: Have a 'make event' button that sends users to a sign-in page, from which they can make a new event or edit one they have made. -->
+  <!-- Todo: also need a search bar (will need PHP for searching?) -->
+  <meta charset="UTF-8">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css">
 
+  <title>Events Calendar : Fresno State </title>
   <style>
     #calendar {
       max-width: 100vh;
@@ -17,6 +21,14 @@
     }
     body {
       background: rgb(240, 240, 240);
+    }
+    #footer ul {
+      list-style: none;
+      font-size: 70%;
+      padding: 0;
+      margin: 0;
+      float:left;
+      overflow: hidden;
     }
   </style>
   <script>
@@ -40,8 +52,46 @@
 </head>
 <body>
 
-  <div id='calendar'></div>
+  <div id='container'>
+    <div id='header'> <!-- header info borrowed from target site -->
+      <div id='logo'>
+        <a href='http://www.fresnostate.edu'>
+          <img alt='Fresno State Logo' src='http://www.fresnostate.edu/omniresources/images/fresno-state-retina-logo.gif'>
+        </a>
+        <!--<h1>Fresno State</h1>-->
+        <!-- end header -->
+      </div>
+      <div id='search'>
+        <form id='form1' method='get' action='http://google.calstate.edu/search'>
+          <input name='access' value='p' type='hidden'>
+          <input name='site' value='csufresno' type='hidden'>
+          <input name='output' value='xml_no_dtd' type='hidden'>
+          <input name='client' value='csufresno-edu' type='hidden'>
+          <input name='sort' value='date%3AD%3AL%3Ad1' type='hidden'>
+          <input name='proxystylesheet' value='csufresno-edu' type='hidden'>
+          <input name='oe' value='UTF-8' type='hidden'>
+          <label for='q'>
+            <input id='q' name='q' size='24' maxlength='235' value='' alt='Search Fresno State' title='Search Fresno State' type='text'>
+          </label>
+
+          <input class='inputbin' value='Go' type='submit'>
+          <label class='search'></label>
+        </form><!-- end Search div -->
+    </div>
+    <div id='calendar'></div>
+    <div id='footer'>
+      <div id='footercol1'>
+        <img class="footer-seal" src="/home/images/fs-seal.gif" alt="Fresno State seal">
+        <ul>
+          <li>
+            <img class="footer-seal" src="/home/images/fs-name.gif" alt="California State University, Fresno"
+            title="California State University, Fresno">
+          </li>
+          <li style="padding-top:5px;">5241 N. Maple Ave.</li>
+          <li>Fresno, CA 93740</li>
+      <!-- have footer information here -->
+    </div>
+  </div> <!-- end container -->
 
 </body>
 </html>
-
