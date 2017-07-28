@@ -1,47 +1,69 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- The above is HTML 4.01 for allowing various browsers to properly load the page. -->
 <html>
-<head>
-  <!-- Worked on by Jacob Rachal & Ian Campos for Fresno State's Computer Science Club's Summer App Project. -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css">
+  <head>
+    <!-- Worked on by Jacob Rachal & Ian Campos for Fresno State's Computer Science Club's Summer App Project. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css">
 
-  <style>
-    #calendar {
-      max-width: 100vh;
-      margin: 0 auto;
-      background-color: white;
-      padding: 24px;
-    }
-    body {
-      background: rgb(240, 240, 240);
-    }
-  </style>
-  <script>
-    $(document).ready(function() {
+    <style>
+      #calendar {
+        max-width: 100vh;
+        margin: 0 auto;
+        background-color: white;
+        padding: 24px;
+      }
+      body {
+        background: rgb(240, 240, 240);
+      }
+      a.button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
 
-      // page is now ready, initialize the calendar...
+        // page is now ready, initialize the calendar...
 
-      $('#calendar').fullCalendar({
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'month,agendaWeek,agendaDay,listWeek'
-        },
-        navLinks: true,      })
+        $('#calendar').fullCalendar({
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay,listWeek'
+          },
+          navLinks: true,
+        })
 
-    });
+      });
 
-  </script>
+    </script>
 
 
-</head>
-<body>
-
-  <div id='calendar'></div>
-
-</body>
+  </head>
+  <body>
+    <table style="width: auto">
+      <td style="width: 12%">
+        <a class="button" href="form.html">Add Event</a>
+      </td>
+      <td id='calendar-col' style="width: 75%">
+        <div id="calendar"></div>
+      </td>
+      <td id='search-col' style="width: 12%">
+        <form action="search.php">
+          <input type="text" name="search" placeholder="Search...">
+          <input type="submit" value="Submit">
+        </form>
+      </td>
+    </table>
+  </body>
 </html>
 
