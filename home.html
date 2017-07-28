@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- The above is HTML 4.01 for allowing various browsers to properly load the page. -->
+<html>
+<head>
+  <!-- Worked on by Jacob Rachal & Ian Campos for Fresno State's Computer Science Club's Summer App Project. -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css">
+
+  <style>
+    #calendar {
+      max-width: 100vh;
+      margin: 0 auto;
+      background-color: white;
+      padding: 24px;
+    }
+    body {
+      background: rgb(240, 240, 240);
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+
+      // page is now ready, initialize the calendar...
+
+      $('#calendar').fullCalendar({
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay,listWeek'
+        },
+        navLinks: true,      })
+
+    });
+
+  </script>
+
+
+</head>
+<body>
+
+  <div id='calendar'></div>
+
+</body>
+</html>
+
