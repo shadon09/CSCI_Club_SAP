@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Registration Form</title>
+</head>
+<body style="background-color: lightcyan";>
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: black;
+	position: fixed;
+	border: 1px #555;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a:hover {
+    background-color: white;
+    color: black;
+}
+</style>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#register">Register</a></li>
+  <li><a href="#login">Login</a></li>
+  <li><a href="#makeevent">Create Event</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<h1 style="text-align:center;">Event Registration Form</h1>
+
+<center><img src="http://content.sportslogos.net/logos/31/681/full/1288_fresno_state_bulldogs-alternate-2006.png" width="200" height="120"></center>
+
+<p style="text-align:center;">Please fill out the form to register your event, and click on <b>Submit</b> when you are done.</p>
+
+<form action ="add_user_data.asp"method="get">
+<p style="text-align:center;">
+
+Event Name<br>
+	<input type="text" name="eventname" /><br/><br/>
+
+Event Type<br>
+	<select>
+		<option value="academic">Academic</option>
+		<option value="cultural">Cultural</option>
+		<option value="Other">Other</option>
+	</select><br><br>
+
+Event Holder Name<br>
+	<input type="text" name="name"><br><br>
+
+Email<br>
+	<input type ="text" name="email"><br><br>
+
+Phone Number<br>
+	<input type="text" name="phonenumber"><br><br>
+
+Guest Name<br>
+	<input type="text" name="guestname"><br><br>
+
+Location<br>
+	<input type="text" name="location"><br><br>
+
+Date<br>
+	<input type="date" name="date1"><br><br>
+
+Starting Time<br>
+	<input type="time" name="stime"><br><br>
+	
+Ending Time<br>
+	<input type="time" name="etime"><br><br>
+
+Description<br>
+	<textarea name="message" rows="10" cols="50"></textarea><br><br>
+
+Notes (Optional)<br>
+	<textarea name="message" rows="10" cols="50"></textarea><br><br>
+
+<input type="submit" value="Submit" />
+
+<input type="reset" value="Reset" /></form>
+</p>
+
+<address>
+Made by Elizabeth-Agnes Gaw and Matthew Morado<br> 
+for the 2017 Summer App Project at California State University - Fresno<br>
+</address>
+
+<body/>
+<html/>
