@@ -1,0 +1,17 @@
+#calendar {
+  max-width: 100vh;
+  margin: 0 auto;
+  background-color: white;
+  padding: 24px;
+}
+body {
+  background: rgb(240, 240, 240);
+}
+#footer ul {
+  list-style: none;
+  font-size: 70%;
+  padding: 0;
+  margin: 0;
+  float:left;
+  overflow: hidden;
+}
