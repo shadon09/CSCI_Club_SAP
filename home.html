@@ -37,14 +37,17 @@ $(document).ready(function() {
         <div id='container'>
             <div id='header'> <!-- header info borrowed from target site -->
                 <div id='logo'>
+                  <h3> EVENT CALENDAR </h3> <h6> Made by the SAP group within the Computer Science Club @ Fresno State, CA </h6>
+
+                  <!--
                     <a href='http://www.fresnostate.edu'>
                         <img alt='Fresno State Logo' src='http://www.fresnostate.edu/omniresources/images/fresno-state-retina-logo.gif'>
-                    </a>
+                    </a> -->
                     <!--<h1>Fresno State</h1>-->
-                    <!-- end header -->
+                    <!-- end logo -->
                 </div>
                 <a class="button" href="form.html">Add Event</a>
-                <div id='search'>
+                <!-- <div id='search'> //commented out search bar (Do we need or want one?) 9/15/17 Jacob
                     <form id='form1' method='get' action='http://google.calstate.edu/search'>
                         <input name='access' value='p' type='hidden'>
                         <input name='site' value='csufresno' type='hidden'>
@@ -59,11 +62,18 @@ $(document).ready(function() {
 
                         <input class='inputbin' value='Go' type='submit'>
                         <label class='search'></label>
-                    </form><!-- end Search div -->
-                </div>
+                    </form>--><!-- end Search div -->
+                </div> <!-- end header section --> <!-- NEED2DO: replace FS banner w/ CSci club logo that can flex -->
                 <div id='calendar'></div>
                 <div id='footer'>
-                    <div id='footercol1'>
+                  <div id='pagepurposecol1'>
+                    <h5>Page Purpose - </h5>
+                  </div>
+                  <div id='pagepurposecol2'>
+                    <p class= "ppurp">  The purpose behind the creation of this website was due to how the Event Calendar on Fresno State's website is unintuitive and not visually pleasing for some of F.S. students. </p>
+                    <p class= "ppurp"> Instead of complaining to Administration about this eyesore, members of the Computer Science Club took it upon themselves to design and make a better-looking and intuitive version.</p>
+                    <p class= "ppurp">With that said, thank you for using our services and have a nice day. </p>
+                    <!--<div id='footercol1'> //commented out old footer for new page purpose story. 9/15/17 Jacob
                         <img class="footer-seal" src="/home/images/fs-seal.gif" alt="Fresno State seal">
                         <ul>
                             <li>
@@ -71,7 +81,7 @@ $(document).ready(function() {
                                                                                         title="California State University, Fresno">
                             </li>
                             <li style="padding-top:5px;">5241 N. Maple Ave.</li>
-                            <li>Fresno, CA 93740</li>
+                            <li>Fresno, CA 93740</li> -->
                             <!-- have footer information here -->
                     </div>
                 </div> <!-- end container -->
